@@ -5,11 +5,10 @@ export default class Form extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      original_name: "",
+      id: "",
       name: "",
-      owner: "",
-      breed: "",
-      redirect: false,
+      restlink: "",
+      pic: ""
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleChange = this.handleChange.bind(this);
@@ -30,10 +29,11 @@ export default class Form extends Component {
       .then((json) => {
         console.log(json);
         this.setState({
-          original_name: json.data.name,
-          name: json.data.name,
-          owner: json.data.owner,
-          breed: json.data.breed,
+          id: json.data._id,
+          name: json.data.meal,
+          restlink: json.data.price,
+          pic: json.data.restaurant,
+        
         });
       });
   }
@@ -44,9 +44,11 @@ export default class Form extends Component {
     fetch("http://localhost:8000/api/v1/meals/" + this.props.match.params.id, {
       method: "PUT",
       body: JSON.stringify({
+        id: this.state._id,
         name: this.state.name,
-        owner: this.state.owner,
-        breed: this.state.breed,
+        restlink: this.state.restlink,
+        pic: this.state.pic,
+    
       }),
       headers: {
         "Content-Type": "application/json",
@@ -68,10 +70,20 @@ export default class Form extends Component {
   render() {
     return (
       <div>
-        <h2>{this.state.original_name && this.state.original_name}</h2>
+        <h2>{this.state._id && this.state._id}</h2>
         <form onSubmit={this.handleSubmit}>
+          <label htmlFor="id">
+            ID:
+            <input
+              type="text"
+              name="_id"
+              id="_id"
+              onChange={this.handleChange}
+              value={this.state._id}
+            />
+          </label>
           <label htmlFor="name">
-            Name:
+          name:
             <input
               type="text"
               name="name"
@@ -80,26 +92,37 @@ export default class Form extends Component {
               value={this.state.name}
             />
           </label>
-          <label htmlFor="owner">
-            Owner:
+          <label htmlFor="restlink">
+            Price:
             <input
               type="text"
-              name="owner"
-              id="owner"
+              name="restlink"
+              id="restlink"
               onChange={this.handleChange}
-              value={this.state.owner}
+              value={this.state.price}
             />
           </label>
-          <label htmlFor="breed">
-            Breed:
+          <label htmlFor="restaurant">
+           Restaurant:
             <input
               type="text"
-              name="breed"
-              id="breed"
+              name="restaurant"
+              id="restaurant"
               onChange={this.handleChange}
-              value={this.state.breed}
+              value={this.state.restaurant}
             />
           </label>
+          <label htmlFor="pic">
+            Image:
+            <input
+              type="text"
+              name="pic"
+              id="pic"
+              onChange={this.handleChange}
+              value={this.state.pic}
+            />
+          </label>
+
           <input type="submit" value="Save changes" />
         </form>
         {this.state.redirect && <Redirect to="/" />}

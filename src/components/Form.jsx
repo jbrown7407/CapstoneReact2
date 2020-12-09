@@ -4,9 +4,11 @@ export default class Form extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      name: "",
-      owner: "",
-      breed: "",
+      id: "",
+      meal: "",
+      price: "",
+      restaurant: "",
+      image: "",
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleChange = this.handleChange.bind(this);
@@ -23,9 +25,11 @@ export default class Form extends Component {
     fetch("http://localhost:8000/api/v1/meals/", {
       method: "POST",
       body: JSON.stringify({
-        name: this.state.name,
-        owner: this.state.owner,
-        breed: this.state.breed,
+        id: this.state.id,
+        meal: this.state.meal,
+        price: this.state.price,
+        restaurant: this.state.restaurant,
+        image: this.state.image,
       }),
       headers: {
         "Content-Type": "application/json",
@@ -49,39 +53,55 @@ export default class Form extends Component {
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
-        <label htmlFor="name">
+       <div>
+        <h2>{this.state._id && this.state._id}</h2>
+  
+
+        <form onSubmit={this.handleSubmit}>
+          <label htmlFor="id">
+            ID:
+            <input
+              type="text"
+              name="_id"
+              id="_id"
+              onChange={this.handleChange}
+              value={this.state._id}
+            />
+          </label>
+          <label htmlFor="name">
           Name:
-          <input
-            type="text"
-            name="name"
-            id="name"
-            onChange={this.handleChange}
-            value={this.state.name}
-          />
-        </label>
-        <label htmlFor="owner">
-          Owner:
-          <input
-            type="text"
-            name="owner"
-            id="owner"
-            onChange={this.handleChange}
-            value={this.state.owner}
-          />
-        </label>
-        <label htmlFor="breed">
-          Breed:
-          <input
-            type="text"
-            name="breed"
-            id="breed"
-            onChange={this.handleChange}
-            value={this.state.breed}
-          />
-        </label>
-        <input type="submit" value="Add Meal!" />
-      </form>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              onChange={this.handleChange}
+              value={this.state.name}
+            />
+          </label>
+          <label htmlFor="restlink">
+           Restaurant:
+            <input
+              type="text"
+              name="restlink"
+              id="restlink"
+              onChange={this.handleChange}
+              value={this.state.restlink}
+            />
+          </label>
+          <label htmlFor="pic">
+            Pic:
+            <input
+              type="text"
+              name="pic"
+              id="pic"
+              onChange={this.handleChange}
+              value={this.state.pic}
+            />
+          </label>
+
+          <input type="submit" value="Save changes" />
+        </form>
+        </div>
     );
   }
 }

@@ -33,7 +33,7 @@ export default class App extends Component {
     });
   }
   getMeals() {
-    fetch("http://localhost:8000/api/v1/meals/")
+    fetch("http://localhost:8000/api/v3/meals/")
       .then((data) => {
         // console.log(data);
         return data.json();
@@ -52,7 +52,7 @@ export default class App extends Component {
 
   render() {
     return (
-      <div>
+      <div className="container">
         <h3> Dinnder </h3>
         <BrowserRouter>
           <Switch>
@@ -60,7 +60,7 @@ export default class App extends Component {
               <Table meals={this.state.meals} deleteMeal={this.deleteMeal} />
               <Form addMeal={this.addMeal} />{" "}
             </Route>
-            {/* <Route exact path="/:id" component={EditForm}></Route> */}
+            <Route exact path="/:id" component={EditForm}></Route>
             <Route
               path="/:id"
               render={(props) => <EditForm {...props} getMeals={this.getMeals} />}

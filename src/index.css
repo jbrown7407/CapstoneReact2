@@ -6,8 +6,11 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+img {
+  width: 200px;
+}
 
-code {
+.code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
@@ -18,14 +21,15 @@ td {
   text-align: center;
 }
 th {
-  background-color: yellow;
+  background-color: red;
 }
 form {
   margin-top: 50px;
 }
 input {
-  display: block;
+  /* display: block; */
   border: 1px solid grey;
+  margin-left: 30px;
 }
 
 
@@ -38,7 +42,7 @@ th {
 }
 
 th {
-    background-color: yellow;
+    background-color:lightblue;
 }
 
 form {
@@ -59,4 +63,13 @@ input[type="submit"] {
     margin-top: 10px;
     width: 100px;
     height: 30px;
+}
+.container {
+  border: 1px solid black;
+  box-shadow: 5px 10px #888888;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
 }

@@ -25,10 +25,16 @@ export default class Meal extends Component {
     return (
       <tr>
         <td>
-          <Link to={"/" + this.props.meal.id}>{this.props.meal.name}</Link>
+          <Link to={"/" + this.props.meal.id}>{this.props.meal.meals}</Link>
+          {/* #plural? */}
         </td>
-        <td>{this.props.meal.owner}</td>
-        <td>{this.props.meal.breed}</td>
+        <td>{this.props.meal.id}</td>
+        <td>{this.props.meal.name}</td>
+        <td>{this.props.meal.restlink}</td>
+        <td>{this.props.meal.pic}</td>
+
+       
+
         <td>
           <button onClick={this.handleClick}>X</button>
         </td>
