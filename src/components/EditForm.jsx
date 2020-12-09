@@ -67,6 +67,18 @@ export default class Form extends Component {
       });
   }
 
+  deleteMeal(json) {
+    const id = parseInt(json.data);
+    const index = this.state.meals.findIndex((meal) => meal.id === id);
+    console.log(index);
+    let copyMeals = [...this.state.meals];
+    copyMeals.splice(index, 1);
+    console.log(copyMeals);
+    this.setState({
+      meals: copyMeals,
+    });
+  }
+
   render() {
     return (
       <div>
@@ -114,7 +126,7 @@ export default class Form extends Component {
               value={this.state.pic}
             />
           </label>
-
+          DELETE: <button onClick={this.handleClick}>X</button>
           <input type="submit" value="Save changes" />
         </form>
         {this.state.redirect && <Redirect to="/" />}

@@ -9,7 +9,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  background-image: linear-gradient(326deg, #947bff 0%, #ffffff 100%);
+  background-image: linear-gradient(326deg, #ff0022 0%, #eeeeee 100%);
   
 }
 img {
@@ -89,4 +89,25 @@ input[type="submit"] {
   margin: 0 auto;
   margin-top: 20px;
 
+}
+.bubble {
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border: 1px solid black;
+  padding: 5px;
+  width: 50%;
+  margin: 0 auto;
+  box-shadow: 3px 5px #3f3f3f;
+
+}
+.left {
+ float: left;
+ border: 3px solid red;
+}
+.right {
+ float: right;
+ border: 3px solid green;
 }

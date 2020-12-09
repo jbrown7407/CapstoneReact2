@@ -20,25 +20,34 @@ export default class Meal extends Component {
         this.props.deleteMeal(json);
       });
   }
+  leftClick() {
+console.log("left click")
+  }
+  rightClick() {
+    console.log("right click")
+  }
 
   render() {
     return (
-      <tr>
-        <td>
-          <Link to={"/" + this.props.meal._id}>{this.props.meal.meal}</Link>
-          {/* #plural? */}
-        </td>
-        {/* <td>{this.props.meal._id}</td> */}
-        <td>{this.props.meal.meal}</td>
-        <td>{this.props.meal.restlink}</td>
-        <td>{this.props.meal.pic}</td>
+      <ul>
+        
+     <li className="bubble">  LINK:  <Link to={"/" + this.props.meal._id}>{this.props.meal.meal}</Link><br />
+          
+       
+        Meal: {this.props.meal.meal} <br />
+        Restlink: <a href={this.props.meal.restlink}>Link to Restaurant</a><br />
+        Pic: <img src={this.props.meal.pic}></img><br />
+          
+
+
 
        
-
-        <td>
-          <button onClick={this.handleClick}>X</button>
-        </td>
-      </tr>
+ <button className="left" onClick={this.leftClick}>Left</button>
+  <button className="right" onClick={this.rightClick}>Right</button>     <br />   <br />  
+         DELETE: <button onClick={this.handleClick}>X</button>
+          </li> 
+       
+      </ul>
     );
   }
 }
