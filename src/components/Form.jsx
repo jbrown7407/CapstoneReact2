@@ -6,9 +6,8 @@ export default class Form extends Component {
     this.state = {
       id: "",
       meal: "",
-      price: "",
-      restaurant: "",
-      image: "",
+      restlink: "",
+      pic: "",
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleChange = this.handleChange.bind(this);
@@ -27,9 +26,8 @@ export default class Form extends Component {
       body: JSON.stringify({
         id: this.state.id,
         meal: this.state.meal,
-        price: this.state.price,
-        restaurant: this.state.restaurant,
-        image: this.state.image,
+        restlink: this.state.restlink,
+        pic: this.state.pic,
       }),
       headers: {
         "Content-Type": "application/json",
@@ -45,16 +43,20 @@ export default class Form extends Component {
       });
 
     this.setState({
-      name: "",
-      owner: "",
-      breed: "",
+      id: "",
+      meal: "",
+      restlink: "",
+      pic: "",
     });
   }
 
   render() {
     return (
        <div>
-        <h2>{this.state._id && this.state._id}</h2>
+        <h2>{this.state._id}</h2>
+        <h2>{this.state.meal}</h2>
+        <h2>{this.state.restlink}</h2>
+        <h2>{this.state.pic}</h2>
   
 
         <form onSubmit={this.handleSubmit}>
@@ -68,14 +70,14 @@ export default class Form extends Component {
               value={this.state._id}
             />
           </label>
-          <label htmlFor="name">
-          Name:
+          <label htmlFor="meal">
+          Meal:
             <input
               type="text"
-              name="name"
-              id="name"
+              name="meal"
+              id="meal"
               onChange={this.handleChange}
-              value={this.state.name}
+              value={this.state.meal}
             />
           </label>
           <label htmlFor="restlink">

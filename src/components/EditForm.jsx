@@ -30,9 +30,9 @@ export default class Form extends Component {
         console.log(json);
         this.setState({
           id: json.data._id,
-          name: json.data.meal,
-          restlink: json.data.price,
-          pic: json.data.restaurant,
+      meal: json.data.meal,
+          restlink: json.data.restlink,
+          pic: json.data.pic,
         
         });
       });
@@ -45,7 +45,7 @@ export default class Form extends Component {
       method: "PUT",
       body: JSON.stringify({
         id: this.state._id,
-        name: this.state.name,
+        meal: this.state.meal,
         restlink: this.state.restlink,
         pic: this.state.pic,
     
@@ -82,14 +82,14 @@ export default class Form extends Component {
               value={this.state._id}
             />
           </label>
-          <label htmlFor="name">
-          name:
+          <label htmlFor="meal">
+          meal:
             <input
               type="text"
-              name="name"
-              id="name"
+              name="meal"
+              id="meal"
               onChange={this.handleChange}
-              value={this.state.name}
+              value={this.state.meal}
             />
           </label>
           <label htmlFor="restlink">
@@ -99,19 +99,10 @@ export default class Form extends Component {
               name="restlink"
               id="restlink"
               onChange={this.handleChange}
-              value={this.state.price}
+              value={this.state.restlink}
             />
           </label>
-          <label htmlFor="restaurant">
-           Restaurant:
-            <input
-              type="text"
-              name="restaurant"
-              id="restaurant"
-              onChange={this.handleChange}
-              value={this.state.restaurant}
-            />
-          </label>
+          
           <label htmlFor="pic">
             Image:
             <input

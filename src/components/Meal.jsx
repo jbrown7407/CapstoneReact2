@@ -29,7 +29,7 @@ export default class Meal extends Component {
           {/* #plural? */}
         </td>
         <td>{this.props.meal.id}</td>
-        <td>{this.props.meal.name}</td>
+        <td>{this.props.meal.meal}</td>
         <td>{this.props.meal.restlink}</td>
         <td>{this.props.meal.pic}</td>
 

@@ -7,7 +7,7 @@ export default class Table extends Component {
       <div>
         
           <table>
-            <th> id </th> <th> Name </th> <th> RestLink </th> <th> Pic </th>{" "}
+            <th> id </th> <th> Meal Name </th> <th> RestLink </th> <th> Pic </th>{" "}
           {" "}
           {this.props.meals.map((meal) => {
             return <Meal meal={meal} deleteMeal={this.props.deleteMeal} />;
