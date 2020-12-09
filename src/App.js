@@ -62,21 +62,26 @@ export default class App extends Component {
 
       <Router>
       <div className="containerz">
-        <h3> Dinnder </h3>
+        
        <Header></Header>
-          <Switch className="container">
+            <Switch className="container">
+              
             <Route exact path="/new">
               <Table meals={this.state.meals} deleteMeal={this.deleteMeal} />
               <Form addMeal={this.addMeal} />{" "}
             </Route>
 
-            <Route exact path="/:id" component={EditForm}></Route>
+              <Route exact path="/:id" component={EditForm}></Route>
+              
             <Route
               path="/:id"
               render={(props) => <EditForm {...props} getMeals={this.getMeals} />}
-            ></Route> 
-            <Route path="/meal" component={Banner} >Meal</Route> 
-            <Route path="/swipe" component={swipeDisplay} >Swipe</Route> 
+              ></Route> 
+              
+              <Route path="/meal" component={Banner} >Meal</Route> 
+              
+              <Route path="/swipe" component={swipeDisplay} >Swipe</Route> 
+              
             <Route path="/fullist" component={Banner} >Full List   <Table meals={this.state.meals} deleteMeal={this.deleteMeal} /></Route> 
             <Route path="/">
               Home</Route> 

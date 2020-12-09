@@ -7,7 +7,8 @@ export default class Header extends Component {
   render() {
       return (
       <div>
-      <div className="banner">
+          <div className="banner">
+          <h3> Dinnder </h3>
         {/* <div className="Banner"> */}
         <ListGroup horizontal className="list">
           <Link to="/">
