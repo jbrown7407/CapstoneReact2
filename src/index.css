@@ -30,13 +30,13 @@ th {
   background-color: red;
 }
 form {
-  margin-top: 50px;
-  display: block;
+
+ 
 }
 input {
   /* display: block; */
   border: 1px solid grey;
-  margin-left: 80px;
+
   padding: 10px;
   
   
@@ -65,8 +65,9 @@ label {
 }
 
 input[type="text"] {
- margin: 0 auto;
- margin-left: 40%;
+
+display: block;
+margin-left: 0px;
     
 }
 
@@ -98,7 +99,7 @@ input[type="submit"] {
   -o-border-radius: 10px;
   border: 1px solid black;
   padding: 5px;
-  width: 50%;
+  width: 80%;
   margin: 0 auto;
   box-shadow: 3px 5px #3f3f3f;
 
