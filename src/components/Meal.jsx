@@ -31,12 +31,12 @@ console.log("left click")
     return (
       <ul>
         
-     <li className="bubble">  LINK:  <Link to={"/" + this.props.meal._id}>{this.props.meal.meal}</Link><br />
+     <li className="bubble"> <div className="container"><img src={this.props.meal.pic}></img></div> <br />  LINK:  <Link to={"/" + this.props.meal._id}>{this.props.meal.meal}</Link><br />
           
        
         Meal: {this.props.meal.meal} <br />
         Restlink: <a href={this.props.meal.restlink}>Link to Restaurant</a><br />
-        Pic: <img src={this.props.meal.pic}></img><br />
+        <br />
           
 
 
