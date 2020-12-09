@@ -6,9 +6,9 @@ export default class Form extends Component {
     super(props);
     this.state = {
       id: "",
-      name: "",
+      meal: "",
       restlink: "",
-      pic: ""
+      pic: "",
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleChange = this.handleChange.bind(this);
@@ -30,7 +30,7 @@ export default class Form extends Component {
         console.log(json);
         this.setState({
           id: json.data._id,
-      meal: json.data.meal,
+          meal: json.data.meal,
           restlink: json.data.restlink,
           pic: json.data.pic,
         
@@ -70,9 +70,10 @@ export default class Form extends Component {
   render() {
     return (
       <div>
-        <h2>{this.state._id && this.state._id}</h2>
+        Edit
+        <h2>{this.state._id && this.state.meal}</h2>
         <form onSubmit={this.handleSubmit}>
-          <label htmlFor="id">
+          {/* <label htmlFor="id">
             ID:
             <input
               type="text"
@@ -81,7 +82,7 @@ export default class Form extends Component {
               onChange={this.handleChange}
               value={this.state._id}
             />
-          </label>
+          </label> */}
           <label htmlFor="meal">
           meal:
             <input

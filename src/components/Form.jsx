@@ -52,15 +52,15 @@ export default class Form extends Component {
 
   render() {
     return (
-       <div>
+       <div className="container">
         <h2>{this.state._id}</h2>
         <h2>{this.state.meal}</h2>
         <h2>{this.state.restlink}</h2>
         <h2>{this.state.pic}</h2>
   
-
+Create New Meal
         <form onSubmit={this.handleSubmit}>
-          <label htmlFor="id">
+          {/* <label htmlFor="id">
             ID:
             <input
               type="text"
@@ -69,7 +69,7 @@ export default class Form extends Component {
               onChange={this.handleChange}
               value={this.state._id}
             />
-          </label>
+          </label> */}
           <label htmlFor="meal">
           Meal:
             <input
@@ -101,7 +101,7 @@ export default class Form extends Component {
             />
           </label>
 
-          <input type="submit" value="Save changes" />
+          <input type="submit" value="New Meal" />
         </form>
         </div>
     );

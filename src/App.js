@@ -60,6 +60,7 @@ export default class App extends Component {
               <Table meals={this.state.meals} deleteMeal={this.deleteMeal} />
               <Form addMeal={this.addMeal} />{" "}
             </Route>
+            
             <Route exact path="/:id" component={EditForm}></Route>
             <Route
               path="/:id"

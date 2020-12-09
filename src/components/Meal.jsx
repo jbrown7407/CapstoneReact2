@@ -25,10 +25,10 @@ export default class Meal extends Component {
     return (
       <tr>
         <td>
-          <Link to={"/" + this.props.meal.id}>{this.props.meal.meals}</Link>
+          <Link to={"/" + this.props.meal._id}>{this.props.meal.meal}</Link>
           {/* #plural? */}
         </td>
-        <td>{this.props.meal.id}</td>
+        {/* <td>{this.props.meal._id}</td> */}
         <td>{this.props.meal.meal}</td>
         <td>{this.props.meal.restlink}</td>
         <td>{this.props.meal.pic}</td>
