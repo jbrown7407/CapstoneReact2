@@ -1,8 +1,12 @@
 import React, { Component } from "react";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import EditForm from "./components/EditForm";
 import Form from "./components/Form";
 import Table from "./components/Table";
+import Banner from "./components/Banner";
+import Footer from "./components/Footer";
+import swipeDisplay from "./components/swipeDisplay";
+import Header from "./components/Header";
 
 export default class App extends Component {
   constructor(props) {
@@ -52,23 +56,36 @@ export default class App extends Component {
 
   render() {
     return (
-      <div className="container">
+      
+<div>
+
+
+      <Router>
+      <div className="containerz">
         <h3> Dinnder </h3>
-        <BrowserRouter>
-          <Switch>
-            <Route exact path="/">
+       <Header></Header>
+          <Switch className="container">
+            <Route exact path="/new">
               <Table meals={this.state.meals} deleteMeal={this.deleteMeal} />
               <Form addMeal={this.addMeal} />{" "}
             </Route>
-            
+
             <Route exact path="/:id" component={EditForm}></Route>
             <Route
               path="/:id"
               render={(props) => <EditForm {...props} getMeals={this.getMeals} />}
-            />
+            ></Route> 
+            <Route path="/meal" component={Banner} >Meal</Route> 
+            <Route path="/swipe" component={swipeDisplay} >Swipe</Route> 
+            <Route path="/fullist" component={Banner} >Full List   <Table meals={this.state.meals} deleteMeal={this.deleteMeal} /></Route> 
+            <Route path="/">
+              Home</Route> 
+           
           </Switch>
-        </BrowserRouter>
-      </div>
+          <Footer></Footer>
+        </div>
+        </Router>
+        </div>
     );
   }
 }

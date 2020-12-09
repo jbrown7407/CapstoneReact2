@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import ListGroup from "react-bootstrap/ListGroup";
-import Carousel from "react-bootstrap/Carousel";
+// import Carousel from "react-bootstrap/Carousel";
 import { Link } from "react-router-dom";
 
 export default class Header extends Component {
@@ -26,11 +26,11 @@ export default class Header extends Component {
           >
             <ListGroup.Item>Inv</ListGroup.Item>
           </Link>
-          <Link to="/extra">
-            <ListGroup.Item>Extra</ListGroup.Item>
+          <Link to="/meal">
+            <ListGroup.Item>Meal</ListGroup.Item>
           </Link>
-          <Link to="/favorites">
-            <ListGroup.Item>Favs</ListGroup.Item>
+          <Link to="/fulllist">
+            <ListGroup.Item>Full List</ListGroup.Item>
           </Link>
         </ListGroup>
 
