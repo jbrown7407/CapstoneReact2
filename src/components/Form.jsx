@@ -7,6 +7,7 @@ export default class Form extends Component {
       id: "",
       meal: "",
       restlink: "",
+     
       pic: "",
     };
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -28,6 +29,7 @@ export default class Form extends Component {
         meal: this.state.meal,
         restlink: this.state.restlink,
         pic: this.state.pic,
+        // restname: this.state.restname
       }),
       headers: {
         "Content-Type": "application/json",
@@ -53,23 +55,23 @@ export default class Form extends Component {
   render() {
     return (
        <div className="container">
-        <h2>{this.state._id}</h2>
+        <h2>{this.state.id}</h2>
         <h2>{this.state.meal}</h2>
         <h2>{this.state.restlink}</h2>
         <h2>{this.state.pic}</h2>
   
 Create New Meal
         <form onSubmit={this.handleSubmit}>
-          {/* <label htmlFor="id">
+          <label htmlFor="id">
             ID:
             <input
-              type="text"
-              name="_id"
-              id="_id"
+              type="number"
+              name="id"
+              id="id"
               onChange={this.handleChange}
-              value={this.state._id}
+              value={this.state.id}
             />
-          </label> */}
+          </label>
           <label htmlFor="meal">
           Meal:
             <input
