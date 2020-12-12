@@ -36,6 +36,7 @@ console.log("left click")
      ID: {this.props.meal.id} <br />
         Meal: {this.props.meal.meal} <br />
         Restlink: <a href={this.props.meal.restlink} target="_blank">Link to Restaurant</a><br />
+          RestName: To Add
         <br />
           
 
