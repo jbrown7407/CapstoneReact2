@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import EditForm from "./components/EditForm";
 import Form from "./components/Form";
 import Table from "./components/Table";
-import Banner from "./components/Banner";
+import NavTop from "./components/NavTop";
 import Footer from "./components/Footer";
 import swipeDisplay from "./components/swipeDisplay";
 import Header from "./components/Header";
@@ -66,8 +66,9 @@ export default class App extends Component {
 
       <Router>
      
-     <div>
-       <Header></Header>
+        <div>
+          <NavTop></NavTop>
+      
            
           <Switch>
               

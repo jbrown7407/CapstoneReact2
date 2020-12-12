@@ -1,18 +1,16 @@
-import React, { Component } from "react";
+import React, { Component } from 'react'
 import ListGroup from "react-bootstrap/ListGroup";
-// import Carousel from "react-bootstrap/Carousel";
 import { Link } from "react-router-dom";
 
 
 
-export default class Header extends Component {
-  render() {
-      return (
-   
-          <div >
-          <h3> Dinnder </h3>
-        {/* <div className="Banner"> */}
-        <ListGroup horizontal className="list">
+export default class NavTop extends Component {
+    render() {
+        return (
+            <div>
+            <div className="banner">
+          <div id="navbar">
+          <ListGroup horizontal className="list">
           <Link to="/">
             <ListGroup.Item>Home</ListGroup.Item>
           </Link>
@@ -35,16 +33,10 @@ export default class Header extends Component {
           <Link to="/fulllist">
             <ListGroup.Item>Full List</ListGroup.Item>
           </Link>
-        </ListGroup>
-
-       
-        </div>
-
-
-        
-        
-
-    
-    );
-  }
+                        </ListGroup>
+                      
+</div>  <h1 class="logo2"> Dinnder </h1>
+            </div> </div>
+        )
+    }
 }

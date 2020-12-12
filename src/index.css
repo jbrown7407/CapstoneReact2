@@ -130,11 +130,9 @@ input[type="submit"] {
 }
 .banner {
 width: 100%;
-background-color: rgb(255, 236, 236);
+background-color: rgb(139, 139, 139);
 border: 1px solid rgb(0, 0, 0);
 color: white;
-
-  
 }
 
 .banner li {
@@ -180,4 +178,9 @@ color: white;
 /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
 .sticky + .content {
   padding-top: 60px;
+}
+.logo2{
+  float: center;
+  font-size: 24px;
+  margin-right :10px;
 }
