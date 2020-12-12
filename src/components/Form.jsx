@@ -50,6 +50,7 @@ export default class Form extends Component {
       restlink: "",
       pic: "",
     });
+   
   }
 
   render() {
@@ -103,7 +104,7 @@ Create New Meal
             />
           </label>
 
-          <input type="submit" value="New Meal" />
+        <input type="submit" value="New Meal"></input>
         </form>
         </div>
     );

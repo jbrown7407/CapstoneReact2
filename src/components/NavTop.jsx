@@ -3,11 +3,10 @@ import ListGroup from "react-bootstrap/ListGroup";
 import { Link } from "react-router-dom";
 
 
-
 export default class NavTop extends Component {
     render() {
         return (
-            <div>
+            <div className="NavTop">
             <div className="banner">
           <div id="navbar">
           <ListGroup horizontal className="list">
