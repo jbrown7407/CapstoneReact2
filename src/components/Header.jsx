@@ -3,11 +3,18 @@ import ListGroup from "react-bootstrap/ListGroup";
 // import Carousel from "react-bootstrap/Carousel";
 import { Link } from "react-router-dom";
 
+
+
 export default class Header extends Component {
   render() {
       return (
-      <div>
-          <div className="banner">
+        <div className="banner">
+          <div id="navbar">
+  <a href="#home">Home</a>
+  <a href="#news">News</a>
+  <a href="#contact">Contact</a>
+</div>
+          <div >
           <h3> Dinnder </h3>
         {/* <div className="Banner"> */}
         <ListGroup horizontal className="list">

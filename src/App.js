@@ -10,6 +10,8 @@ import Header from "./components/Header";
 import Card from "./components/Card";
 // import Meal from "./components/Meal";
 
+
+
 export default class App extends Component {
   constructor(props) {
     super(props);
@@ -35,7 +37,9 @@ export default class App extends Component {
     copyMeals.splice(index, 1);
     console.log(copyMeals);
     this.setState({
-      meals: copyMeals,.id
+      meals: copyMeals,
+    });
+  }
   getMeals() {
     fetch("http://localhost:8000/api/v1/meals/")
       .then((data) => {
@@ -64,7 +68,8 @@ export default class App extends Component {
      
      <div>
        <Header></Header>
-            <Switch>
+           
+          <Switch>
               
             <Route exact path="/new">     
               <Form addMeal={this.addMeal} />{" "}
