@@ -7,6 +7,7 @@ import Banner from "./components/Banner";
 import Footer from "./components/Footer";
 import swipeDisplay from "./components/swipeDisplay";
 import Header from "./components/Header";
+import Meal from "./components/Meal";
 
 export default class App extends Component {
   constructor(props) {
@@ -57,40 +58,40 @@ export default class App extends Component {
   render() {
     return (
       
-<div>
+
 
 
       <Router>
-      <div className="containerz">
-        
+     
+     <div>
        <Header></Header>
-            <Switch className="container">
+            <Switch>
               
-            <Route exact path="/new">
-               />
+            <Route exact path="/new">     
               <Form addMeal={this.addMeal} />{" "}
             </Route>
 
-              <Route exact path="/:id" component={EditForm}></Route>
+            <Route exact path="/:id" component={EditForm}></Route>
               
             <Route
               path="/:id"
               render={(props) => <EditForm {...props} getMeals={this.getMeals} />}
-              ></Route> 
+            ></Route> 
               
-              <Route path="/meal" component={Banner} >Meal</Route> 
+              <Route path="/meal"><Table meals={this.state.meals} deleteMeal={this.deleteMeal}></Table></Route> 
               
-              <Route path="/swipe" component={swipeDisplay} >Swipe</Route> 
-              <Table meals={this.state.meals} deleteMeal={this.deleteMeal}></Table>
-            <Route path="/fullist" component={Banner} >Full List   <Table meals={this.state.meals} deleteMeal={this.deleteMeal}></Table></Route> 
+              <Route path="/swipe" component={swipeDisplay} >Swipe
+              <Table meals={this.state.meals} deleteMeal={this.deleteMeal}></Table></Route> 
+            <Route path="/fullist">  <Table meals={this.state.meals} deleteMeal={this.deleteMeal}></Table></Route> 
             <Route path="/">
+          <Table meals={this.state.meals} deleteMeal={this.deleteMeal}></Table>
               Home</Route> 
            
           </Switch>
           <Footer></Footer>
         </div>
         </Router>
-        </div>
+    
     );
   }
 }

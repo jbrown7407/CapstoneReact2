@@ -4,7 +4,7 @@ export default class swipeDisplay extends Component {
     render() {
         return (
             <div>
-                SwipeDisplay
+                Display one card
             </div>
         )
     }
