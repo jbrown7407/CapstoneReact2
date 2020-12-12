@@ -13,7 +13,10 @@ body {
   
 }
 img {
-  width: 200px;
+  width: 300px;
+  padding: 1px;
+  margin: 0 auto;
+  float: center;
 }
 
 .code {
@@ -99,7 +102,7 @@ input[type="submit"] {
   -o-border-radius: 10px;
   border: 1px solid black;
   padding: 5px;
-  width: 80%;
+  width: 300px;
   margin: 0 auto;
   box-shadow: 3px 5px #3f3f3f;
   background-color: rgb(209, 255, 255);

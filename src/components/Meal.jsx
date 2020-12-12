@@ -31,7 +31,7 @@ console.log("left click")
     return (
       <ul>
         
-     <li className="bubble"> <div className="container"><img src={this.props.meal.pic}></img></div> <br />  LINK:  <Link to={"/" + this.props.meal._id}>{this.props.meal.meal}</Link><br />
+     <li className="bubble"> <img src={this.props.meal.pic}></img> <br />  LINK:  <Link to={"/" + this.props.meal._id}>{this.props.meal.meal}</Link><br />
           
      ID: {this.props.meal.id} <br />
         Meal: {this.props.meal.meal} <br />
