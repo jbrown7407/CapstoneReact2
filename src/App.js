@@ -7,7 +7,8 @@ import Banner from "./components/Banner";
 import Footer from "./components/Footer";
 import swipeDisplay from "./components/swipeDisplay";
 import Header from "./components/Header";
-import Meal from "./components/Meal";
+import Card from "./components/Card";
+// import Meal from "./components/Meal";
 
 export default class App extends Component {
   constructor(props) {
@@ -34,9 +35,7 @@ export default class App extends Component {
     copyMeals.splice(index, 1);
     console.log(copyMeals);
     this.setState({
-      meals: copyMeals,
-    });
-  }
+      meals: copyMeals,.id
   getMeals() {
     fetch("http://localhost:8000/api/v1/meals/")
       .then((data) => {
@@ -78,7 +77,7 @@ export default class App extends Component {
               render={(props) => <EditForm {...props} getMeals={this.getMeals} />}
             ></Route> 
               
-              <Route path="/meal"><Table meals={this.state.meals} deleteMeal={this.deleteMeal}></Table></Route> 
+              <Route path="/meal"><Card></Card></Route> 
               
               <Route path="/swipe" component={swipeDisplay} >Swipe
               <Table meals={this.state.meals} deleteMeal={this.deleteMeal}></Table></Route> 
