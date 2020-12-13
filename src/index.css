@@ -106,8 +106,9 @@ input[type="submit"] {
   margin: 0 auto;
   box-shadow: 3px 5px #3f3f3f;
   background-color: rgb(209, 255, 255);
-
+display: grid;
 }
+ul {display: inline-grid;}
 .left {
  float: left;
  border: 3px solid red;

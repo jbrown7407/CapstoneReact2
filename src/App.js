@@ -68,6 +68,7 @@ export default class App extends Component {
           <Switch>
               
             <Route exact path="/new">     
+            Create a new entry
               <Form addMeal={this.addMeal} />{" "}
             </Route>
 
