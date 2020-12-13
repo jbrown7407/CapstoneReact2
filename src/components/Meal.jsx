@@ -21,10 +21,10 @@ export default class Meal extends Component {
       });
   }
   leftClick() {
-console.log("left click")
+console.log("left click. add to dislike array for user")
   }
   rightClick() {
-    console.log("right click")
+    console.log("right click. add to favs array")
   }
 
   render() {
