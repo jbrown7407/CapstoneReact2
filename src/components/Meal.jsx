@@ -24,7 +24,7 @@ export default class Meal extends Component {
 console.log("left click. add to dislike array for user")
   }
   rightClick() {
-    console.log("right click. add to favs array")
+    console.log("right click. add to favs array. option to link to restaurant")
   }
 
   render() {
