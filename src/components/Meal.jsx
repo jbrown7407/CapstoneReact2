@@ -38,6 +38,7 @@ console.log("left click")
         Restlink: <a href={this.props.meal.restlink} target="_blank">Link to Restaurant</a><br />
           RestName: To Add
         <br />
+          {/* destructure props */}
           
 
 

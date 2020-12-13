@@ -20,16 +20,16 @@ export default class NavTop extends Component {
             <ListGroup.Item>New</ListGroup.Item>
           </Link>
           <Link
-            to="/inventory"
-            // products={this.props.products}
-            // deleteProduct={this.deleteProduct}
+            to="/fulllist"
+             meals={this.props.meals}
+             deleteProduct={this.deleteMeal}
           >
             <ListGroup.Item>Inv</ListGroup.Item>
           </Link>
           <Link to="/meal">
             <ListGroup.Item>Meal</ListGroup.Item>
           </Link>
-          <Link to="/fulllist">
+          <Link to="/inventory">
             <ListGroup.Item>Full List</ListGroup.Item>
           </Link>
                         </ListGroup>
