@@ -10,6 +10,8 @@ import Header from "./components/Header";
 import Card from "./components/Card";
 // import Meal from "./components/Meal";
 
+
+
 export default class App extends Component {
   constructor(props) {
     super(props);
@@ -58,18 +60,17 @@ export default class App extends Component {
 
   render() {
     return (
-      
+
       <Router>
+     
         <div>
-          
           <NavTop></NavTop>
       
            
           <Switch>
               
             <Route exact path="/new">     
-            Create a new entry
-              <Form addMeal={thims.addMeal} />{" "}
+              <Form addMeal={this.addMeal} />{" "}
             </Route>
 
             <Route exact path="/:id" component={EditForm}></Route>
@@ -83,12 +84,7 @@ export default class App extends Component {
               
               <Route path="/swipe" component={swipeDisplay} >Swipe
               <Table meals={this.state.meals} deleteMeal={this.deleteMeal}></Table></Route> 
-            
-            <Route path="/fullist">
-              render={<Table meals={this.state.meals} deleteMeal={this.deleteMeal}></Table>}
-              Full List
-            </Route> 
-
+            <Route path="/fullist">  <Table meals={this.state.meals} deleteMeal={this.deleteMeal}></Table></Route> 
             <Route path="/">
           <Table meals={this.state.meals} deleteMeal={this.deleteMeal}></Table>
               Home</Route> 

@@ -12,30 +12,7 @@ export default class Header extends Component {
           <div >
           <h3> Dinnder </h3>
         {/* <div className="Banner"> */}
-        <ListGroup horizontal className="list">
-          <Link to="/">
-            <ListGroup.Item>Home</ListGroup.Item>
-          </Link>
-          <Link to="/swipe">
-            <ListGroup.Item>Swipe</ListGroup.Item>
-          </Link>
-          <Link to="/new">
-            <ListGroup.Item>New</ListGroup.Item>
-          </Link>
-          <Link
-            to="/inventory"
-            // products={this.props.products}
-            // deleteProduct={this.deleteProduct}
-          >
-            <ListGroup.Item>Inv</ListGroup.Item>
-          </Link>
-          <Link to="/meal">
-            <ListGroup.Item>Meal</ListGroup.Item>
-          </Link>
-          <Link to="/fulllist">
-            <ListGroup.Item>Full List</ListGroup.Item>
-          </Link>
-        </ListGroup>
+       
 
        
         </div>
