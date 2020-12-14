@@ -92,7 +92,11 @@ input[type="submit"] {
   background-color: rgb(255, 233, 233);
   margin: 0 auto;
   margin-top: 20px;
-
+height: 100%;
+}
+.container-fluid{
+  height: 100%;
+  padding: 10px;
 }
 .bubble {
   border-radius: 10px;

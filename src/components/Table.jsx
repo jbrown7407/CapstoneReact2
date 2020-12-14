@@ -9,7 +9,9 @@ export default class Table extends Component {
          
     
           {this.props.meals.map((meal) => {
-            return <Meal meal={meal} deleteMeal={this.props.deleteMeal} />;
+            return <Meal
+              meal={meal}
+              deleteMeal={this.props.deleteMeal} />;
           })}{" "}
           {" "}
           

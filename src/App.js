@@ -69,7 +69,7 @@ export default class App extends Component {
               
             <Route exact path="/new">     
             Create a new entry
-              <Form addMeal={this.addMeal} />{" "}
+              <Form addMeal={thims.addMeal} />{" "}
             </Route>
 
             <Route exact path="/:id" component={EditForm}></Route>
@@ -85,7 +85,7 @@ export default class App extends Component {
               <Table meals={this.state.meals} deleteMeal={this.deleteMeal}></Table></Route> 
             
             <Route path="/fullist">
-              <Table meals={this.state.meals} deleteMeal={this.deleteMeal}></Table>
+              render={<Table meals={this.state.meals} deleteMeal={this.deleteMeal}></Table>}
               Full List
             </Route> 
 
