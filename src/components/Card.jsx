@@ -9,21 +9,26 @@ export default function Card() {
     const meal = "burger"
     const id = "9"
 
+    const Meal = ({ img, title, author }) => {
+        
+    
+    
+
     return (
         <div>
             Card
-           Pic <img>{pic}</img>
+           Pic <img>{this.props.pic}</img>
            RestName: <h1>{restlink}</h1>
            {/* Link: <h1>{restlink}</h1> */}
            Meal <h3>{meal}</h3>
            ID: <h3>{id}</h3>
         
             
-           <div className="bubble"> <img src={this.props.meal.pic}></img> <br />  LINK:  <br />
+           <div className="bubble"> <img src={this.props.Meal.pic}></img> <br />  LINK:  <br />
           
-          ID: {this.props.meal.id} <br />
-             Meal: {this.props.meal.meal} <br />
-             Restlink: <a href={this.props.meal.restlink} target="_blank">Link to Restaurant</a><br />
+          ID: {this.props.Meal.id} <br />
+             Meal: {this.props.Meal.meal} <br />
+             Restlink: <a href={this.props.Meal.restlink} target="_blank">Link to Restaurant</a><br />
                 </div>
              <br />
         </div>

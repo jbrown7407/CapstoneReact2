@@ -55,7 +55,7 @@ export default class App extends Component {
   }
 
   componentDidMount() {
-    this.getMeals();
+    this.getMeals(); //API call occurs when getMeals is called
   }
 
   render() {
@@ -65,7 +65,7 @@ export default class App extends Component {
      
         <div>
           <NavTop></NavTop>
-      
+      <Card></Card>
            
           <Switch>
               
