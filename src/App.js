@@ -1,14 +1,16 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import EditForm from "./components/EditForm";
+import EditForm from "./components/EditForm"; //jss extension is auto
 import Form from "./components/Form";
 import Table from "./components/Table";
 import NavTop from "./components/NavTop";
 import Footer from "./components/Footer";
 import swipeDisplay from "./components/swipeDisplay";
 import Header from "./components/Header";
-import Card from "./components/Card";
+// import Card from "./components/Card";
 // import Meal from "./components/Meal";
+
+// import {meals} from "./components/Meals";
 
 
 
@@ -65,7 +67,7 @@ export default class App extends Component {
      
         <div>
           <NavTop></NavTop>
-      <Card></Card>
+  
            
           <Switch>
               
@@ -80,7 +82,7 @@ export default class App extends Component {
               render={(props) => <EditForm {...props} getMeals={this.getMeals} />}
             ></Route> 
               
-              <Route path="/meal"><Card></Card></Route> 
+              <Route path="/meal"></Route> 
               
               <Route path="/swipe" component={swipeDisplay} >Swipe
               <Table meals={this.state.meals} deleteMeal={this.deleteMeal}></Table></Route> 

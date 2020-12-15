@@ -20,12 +20,12 @@ export default class Meal extends Component {
         this.props.deleteMeal(json);
       });
   }
-  leftClick() {
-console.log("left click. add to dislike array for user")
-  }
-  rightClick() {
-    console.log("right click. add to favs array. option to link to restaurant")
-  }
+//   function leftClick() {
+// console.log("left click. add to dislike array for user")
+//   }
+//   function rightClick() {
+//     console.log("right click. add to favs array. option to link to restaurant")
+//   }
 
   render() {
     return (
@@ -40,12 +40,8 @@ console.log("left click. add to dislike array for user")
         <br />
           {/* destructure props */}
           
-
-
-
-       
- <button className="left" onClick={leftClick()}>Left</button>
-  <button className="right" onClick={rightClick()}>Right</button>     <br />   <br />  
+ <button className="left" >Left</button>
+  <button className="right" >Right</button>     <br />   <br />  
          DELETE: <button onClick={this.handleClick}>X</button>
           </li> 
        
