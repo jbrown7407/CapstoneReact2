@@ -3,12 +3,13 @@ import Meal from "./Meal";
 
 export default class Card extends Component {
     render() {
-        return(
-        <div>
-             <Meal
-                />
-          
-          
-      </div>
-        )};
-  }
+        return (
+            <div>
+                {  console.log(this.props.meals) }
+          Logging
+              
+          <Meal key="id"></Meal>
+            </div>
+        )
+    }
+}

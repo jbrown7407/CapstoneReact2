@@ -4,10 +4,8 @@ import EditForm from "./components/EditForm"; //jss extension is auto
 import Form from "./components/Form";
 import Table from "./components/Table";
 import NavTop from "./components/NavTop";
-
-
-import Header from "./components/Header";
-// import Card from "./components/Card";
+import UserName from "./components/UserName";
+import Card from "./components/Card";
 // import Meal from "./components/Meal";
 
 // import {meals} from "./components/Meals";
@@ -67,7 +65,7 @@ export default class App extends Component {
      
         <div>
           <NavTop></NavTop>
-  {/* <Card></Card> */}
+        
         
           
           <Switch>
@@ -83,10 +81,13 @@ export default class App extends Component {
               render={(props) => <EditForm {...props} getMeals={this.getMeals} />}
             ></Route> 
               
-              <Route path="/meal">Meal</Route> 
-             
+              <Route path="/login">Login
+             Welcome:     <UserName />
+            </Route> 
+            
             <Route path="/swipe" >
               Swipe
+          
              </Route> 
             
             <Route path="/fullist">

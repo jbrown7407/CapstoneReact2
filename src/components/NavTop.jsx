@@ -24,8 +24,8 @@ export default class NavTop extends Component {
           >
             <ListGroup.Item>Full List</ListGroup.Item>
           </Link>
-          <Link to="/meal">
-            <ListGroup.Item>Meal</ListGroup.Item>
+          <Link to="/login">
+            <ListGroup.Item>Login</ListGroup.Item>
           </Link>
         
                         </ListGroup>
