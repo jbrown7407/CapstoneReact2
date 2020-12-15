@@ -3,12 +3,9 @@ import React from 'react'
 const UserName = () => {
     const userName="Jeff"
     return (
-        <div>
-        
-            <ul>
-               
+        <div>         
                 <h1>User={userName}</h1>
-             </ul>
+           
         </div>
     )
 }

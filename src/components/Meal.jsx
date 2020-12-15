@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+
 
 export default class Meal extends Component {
   constructor(props) {
@@ -26,16 +26,16 @@ export default class Meal extends Component {
 //   function rightClick() {
 //     console.log("right click. add to favs array. option to link to restaurant")
 //   }
-
+     
   render() {
     return (
  
         
-     <article className="bubble"> <img src={this.props.meal.pic}></img> <br />  LINK:  <Link to={"/" + this.props.meal.id}>{this.props.meal.id}</Link><br />
+     <article className="bubble"> <img src={this.props.meal.pic} alt="nope"></img> <br />  <br />
           
      ID: {this.props.meal.id} <br />
         Meal: {this.props.meal.meal} <br />
-        Restlink: <a href={this.props.meal.restlink} target="_blank">Link to Restaurant</a><br />
+        Restlink: <a href={this.props.meal.restlink} target="_blank" rel="noreferrer">Link to Restaurant</a><br />
           RestName: To Add
         <br />
           {/* destructure props */}
@@ -43,8 +43,9 @@ export default class Meal extends Component {
  <button className="left" >Left</button>
   <button className="right" >Right</button>     <br />   <br />  
          DELETE: <button onClick={this.handleClick}>X</button>
-          </article> 
-       
+      </article> 
+      
+      // { if (this.props.meal.id != 1) }
  
     );
   }

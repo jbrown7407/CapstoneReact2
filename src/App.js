@@ -1,11 +1,11 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import EditForm from "./components/EditForm"; //jss extension is auto
 import Form from "./components/Form";
 import Table from "./components/Table";
 import NavTop from "./components/NavTop";
 import UserName from "./components/UserName";
-import Card from "./components/Card";
+// import Card from "./components/Card";
 // import Meal from "./components/Meal";
 
 // import {meals} from "./components/Meals";
@@ -66,7 +66,7 @@ export default class App extends Component {
         <div>
           <NavTop></NavTop>
         
-        
+        {/* <Card></Card> */}
           
           <Switch>
               
@@ -87,7 +87,7 @@ export default class App extends Component {
             
             <Route path="/swipe" >
               Swipe
-          
+              <Table meals={this.state.meals} deleteMeal={this.deleteMeal}></Table>
              </Route> 
             
             <Route path="/fullist">
