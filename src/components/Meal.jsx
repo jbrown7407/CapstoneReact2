@@ -44,8 +44,8 @@ console.log("left click. add to dislike array for user")
 
 
        
- <button className="left" onClick={this.leftClick}>Left</button>
-  <button className="right" onClick={this.rightClick}>Right</button>     <br />   <br />  
+ <button className="left" onClick={leftClick()}>Left</button>
+  <button className="right" onClick={rightClick()}>Right</button>     <br />   <br />  
          DELETE: <button onClick={this.handleClick}>X</button>
           </li> 
        
