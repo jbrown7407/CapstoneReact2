@@ -29,9 +29,9 @@ export default class Meal extends Component {
 
   render() {
     return (
-      <ul>
+ 
         
-     <li className="bubble"> <img src={this.props.meal.pic}></img> <br />  LINK:  <Link to={"/" + this.props.meal._id}>{this.props.meal.meal}</Link><br />
+     <article className="bubble"> <img src={this.props.meal.pic}></img> <br />  LINK:  <Link to={"/" + this.props.meal.id}>{this.props.meal.id}</Link><br />
           
      ID: {this.props.meal.id} <br />
         Meal: {this.props.meal.meal} <br />
@@ -43,9 +43,9 @@ export default class Meal extends Component {
  <button className="left" >Left</button>
   <button className="right" >Right</button>     <br />   <br />  
          DELETE: <button onClick={this.handleClick}>X</button>
-          </li> 
+          </article> 
        
-      </ul>
+ 
     );
   }
 }

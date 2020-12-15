@@ -4,8 +4,8 @@ import EditForm from "./components/EditForm"; //jss extension is auto
 import Form from "./components/Form";
 import Table from "./components/Table";
 import NavTop from "./components/NavTop";
-import Footer from "./components/Footer";
-import swipeDisplay from "./components/swipeDisplay";
+
+
 import Header from "./components/Header";
 // import Card from "./components/Card";
 // import Meal from "./components/Meal";
@@ -67,32 +67,39 @@ export default class App extends Component {
      
         <div>
           <NavTop></NavTop>
-  
-           
+  {/* <Card></Card> */}
+        
+          
           <Switch>
               
             <Route exact path="/new">     
               <Form addMeal={this.addMeal} />{" "}
             </Route>
 
-            <Route exact path="/:id" component={EditForm}></Route>
+            {/* <Route exact path="/e/:id" component={EditForm}></Route> */}
               
             <Route
-              path="/:id"
+              path="/e/:id"
               render={(props) => <EditForm {...props} getMeals={this.getMeals} />}
             ></Route> 
               
-              <Route path="/meal"></Route> 
-              
-              <Route path="/swipe" component={swipeDisplay} >Swipe
-              <Table meals={this.state.meals} deleteMeal={this.deleteMeal}></Table></Route> 
-            <Route path="/fullist">  <Table meals={this.state.meals} deleteMeal={this.deleteMeal}></Table></Route> 
+              <Route path="/meal">Meal</Route> 
+             
+            <Route path="/swipe" >
+              Swipe
+             </Route> 
+            
+            <Route path="/fullist">
+              FULL LIST <Table meals={this.state.meals} deleteMeal={this.deleteMeal}></Table>
+            </Route> 
+
             <Route path="/">
+              HOME
           <Table meals={this.state.meals} deleteMeal={this.deleteMeal}></Table>
-              Home</Route> 
+          </Route> 
            
           </Switch>
-          <Footer></Footer>
+       
         </div>
         </Router>
     
