@@ -36,7 +36,7 @@ export default class Meal extends Component {
      ID: {this.props.meal.id} <br />
         Meal: {this.props.meal.meal} <br />
         Restlink: <a href={this.props.meal.restlink} target="_blank" rel="noreferrer">Link to Restaurant</a><br />
-          RestName: To Add
+          {/* RestName: To Add */}
         <br />
           {/* destructure props */}
           

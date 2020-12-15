@@ -1,5 +1,5 @@
 * {
-  background-color: #a5a5a5;
+  background-color: #ff6767;
 }
 body {
   margin: 0;
@@ -9,7 +9,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  background-color: rgb(80, 80, 80);
+  background-color: rgb(255, 99, 99);
   
 }
 img {
@@ -17,6 +17,8 @@ img {
   padding: 1px;
   margin: 0 auto;
   float: center;
+ box-sizing: border-box;
+  border: 1px solid black;
 }
 
 .code {
@@ -55,7 +57,7 @@ th {
 }
 
 th {
-    background-color:lightblue;
+    background-color:rgb(255, 255, 255);
 }
 
 form {
@@ -71,6 +73,7 @@ input[type="text"] {
 
 display: block;
 margin-left: 0px;
+background-color: white;
     
 }
 
@@ -104,18 +107,21 @@ input[type="submit"] {
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
-  border: 1px solid black;
-  padding: 5px;
+  border: 10px solid black;
+  margin-bottom: 20px;
+  padding: 20px, 20px, 20px, 20px;
   width: 300px;
   margin: 0 auto;
-  box-shadow: 3px 5px #3f3f3f;
-  background-color: rgb(209, 255, 255);
-display: grid;
+  margin-top: 20px;
+  box-shadow: 1px 3px #814a4a;
+  background-color: rgb(245, 255, 255);
+  display: grid;
+
 }
-ul {display: inline-grid;}
-.left {
+
+button.left {
  float: left;
- border: 3px solid red;
+ border: 3px solid rgb(0, 0, 0);
  border-radius: 50%;
  -webkit-border-radius: 50%;
  -moz-border-radius: 50%;
@@ -124,7 +130,7 @@ ul {display: inline-grid;}
  padding: 5px;
  width: 20%;
 }
-.right {
+button.right {
 
  border: 3px solid green;
  border-radius: 50%;
@@ -134,7 +140,7 @@ ul {display: inline-grid;}
  -o-border-radius: 50%;
  padding: 5px;
  width: 20%;
- margin-right: 5px;
+ margin-right: 200px;
 }
 .banner {
 width: 100%;
@@ -193,3 +199,12 @@ color: white;
   margin-right :10px;
 }
 
+.list-group-item{
+
+color:black;
+
+}
+button {
+  background-color: aliceblue;
+  border: 3px solid black;
+}
