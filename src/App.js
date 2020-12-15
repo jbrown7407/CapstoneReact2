@@ -5,7 +5,9 @@ import Form from "./components/Form";
 import Table from "./components/Table";
 import NavTop from "./components/NavTop";
 import UserName from "./components/UserName";
-// import Card from "./components/Card";
+import Swipe from "./components/Swipe";
+// import Login from "./components/Login";
+import Card from "./components/Card";
 // import Meal from "./components/Meal";
 
 // import {meals} from "./components/Meals";
@@ -66,8 +68,8 @@ export default class App extends Component {
         <div>
           <NavTop></NavTop>
         
-        {/* <Card></Card> */}
-          
+  
+           
           <Switch>
               
             <Route exact path="/new">     
@@ -81,16 +83,18 @@ export default class App extends Component {
               render={(props) => <EditForm {...props} getMeals={this.getMeals} />}
             ></Route> 
               
-              <Route path="/login">Login
-             Welcome:     <UserName />
+            <Route path="/login">Login
+             {/* <Login></Login> */}
+               <UserName />
             </Route> 
             
             <Route path="/swipe" >
-              Swipe
+            <Card></Card>
+              <Swipe></Swipe>
               <Table meals={this.state.meals} deleteMeal={this.deleteMeal}></Table>
              </Route> 
             
-            <Route path="/fullist">
+            <Route path="/fulllist">
               FULL LIST <Table meals={this.state.meals} deleteMeal={this.deleteMeal}></Table>
             </Route> 
 

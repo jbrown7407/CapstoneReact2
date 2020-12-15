@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Redirect } from "react-router-dom";
 
 export default class Form extends Component {
   constructor(props) {
@@ -106,6 +107,7 @@ Create New Meal
 
         <input type="submit" value="New Meal"></input>
         </form>
+        {this.state.redirect && <Redirect to="/" />}
         </div>
     );
   }
