@@ -2,7 +2,7 @@
 // import UserName from "./UserName";
 // // import Greeting from "./Greeting";
 
-// const Logins = () => {
+// const Login = (props) => {
 //     const isLoggedIn = props.isLoggedIn
 //     const UserName = "Jeff"
 //     const passWord = "development"
