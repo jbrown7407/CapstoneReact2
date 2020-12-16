@@ -31,14 +31,14 @@ rightClick() {
     return (
  
         
-     <article className="bubble"> <img src={this.props.meal.pic} alt="nope"></img> <br />  <br />
+     <article className="card"> <img src={this.props.meal.pic} alt="nope"></img> <br />  <br />
           
      ID: {this.props.meal.id} <br />
         Meal: {this.props.meal.meal} <br />
         Restlink: <a href={this.props.meal.restlink} target="_blank" rel="noreferrer">Link to Restaurant</a><br />
           {/* RestName: To Add */}
         <br />
-         
+       
           
  <button className="left" >Left</button>
   <button className="right" >Right</button>     <br />   <br />  

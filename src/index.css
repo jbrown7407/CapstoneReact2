@@ -101,7 +101,7 @@ input[type="submit"] {
   height: 100%;
   padding: 10px;
 }
-.bubble {
+.card {
   border-radius: 10px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
@@ -118,7 +118,7 @@ input[type="submit"] {
   display: grid;
 
 }
-.bubble:hover {
+.card:hover {
   border-radius: 10px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
