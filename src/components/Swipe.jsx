@@ -26,8 +26,7 @@ export default class Swipe extends Component {
       x = Math.ceil(Math.random() * (mealArray.length-1))
       y = Math.ceil(Math.random() * (mealArray.length-1))
     }
-
-    pullNewX()
+    pullNewIndex()
     const meal1 = mealArray[x]
     console.log(typeof meal1)
     const meal2 = mealArray[y]
