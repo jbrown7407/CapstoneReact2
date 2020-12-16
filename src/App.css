@@ -36,3 +36,7 @@
     transform: rotate(360deg);
   }
 }
+
+.React-Jumbotron {
+  background-color: antiquewhite;
+}

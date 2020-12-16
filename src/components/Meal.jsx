@@ -20,12 +20,12 @@ export default class Meal extends Component {
         this.props.deleteMeal(json);
       });
   }
-//   function leftClick() {
-// console.log("left click. add to dislike array for user")
-//   }
-//   function rightClick() {
-//     console.log("right click. add to favs array. option to link to restaurant")
-//   }
+leftClick() {
+console.log("left click. add to dislike array for user")
+  }
+rightClick() {
+    console.log("right click. add to favs array. option to link to restaurant")
+  }
      
   render() {
     return (
@@ -38,7 +38,7 @@ export default class Meal extends Component {
         Restlink: <a href={this.props.meal.restlink} target="_blank" rel="noreferrer">Link to Restaurant</a><br />
           {/* RestName: To Add */}
         <br />
-          {/* destructure props */}
+         
           
  <button className="left" >Left</button>
   <button className="right" >Right</button>     <br />   <br />  

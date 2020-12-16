@@ -28,7 +28,7 @@ export default class NavTop extends Component {
         
                         </ListGroup>
                       
-</div>  <h1 class="logo2"> Dinnder </h1>
+</div>  <h1 className="logo2"> Dinnder </h1>
             </div> </div>
         )
     }

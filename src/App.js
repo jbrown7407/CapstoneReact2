@@ -6,8 +6,9 @@ import Table from "./components/Table";
 import NavTop from "./components/NavTop";
 import UserName from "./components/UserName";
 import Swipe from "./components/Swipe";
-// import Login from "./components/Login";
+import Login from "./components/Login";
 import Card from "./components/Card";
+import Home from "./components/Home";
 // import Meal from "./components/Meal";
 
 // import {meals} from "./components/Meals";
@@ -85,7 +86,7 @@ export default class App extends Component {
             ></Route> 
               
             <Route path="/login">Login
-             {/* <Login></Login> */}
+             <Login></Login>
                <UserName />
             </Route> 
             
@@ -101,6 +102,7 @@ export default class App extends Component {
 
             <Route path="/">
               HOME
+               <Home></Home>
           <Table meals={this.state.meals} deleteMeal={this.deleteMeal}></Table>
           </Route> 
            
