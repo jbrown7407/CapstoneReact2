@@ -53,6 +53,7 @@ export default class App extends Component {
         console.log(json);
         this.setState({
           meals: json.data,
+      
         });
       });
   }
@@ -62,6 +63,7 @@ export default class App extends Component {
   }
 
   render() {
+  
     return (
 
       <Router>
@@ -92,8 +94,8 @@ export default class App extends Component {
             
             <Route path="/swipe" >
             <Card></Card>
-              <Swipe></Swipe>
-              <Table meals={this.state.meals} deleteMeal={this.deleteMeal}></Table>
+              <Swipe meals={this.state.meals}></Swipe>
+           
              </Route> 
             
             <Route path="/fulllist">

@@ -62,7 +62,7 @@ export default class Form extends Component {
         <h2>{this.state.restlink}</h2>
         <h2>{this.state.pic}</h2>
   
-Create New Meal
+
         <form onSubmit={this.handleSubmit}>
           <label htmlFor="id">
             ID:
