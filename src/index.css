@@ -113,10 +113,14 @@ input[type="submit"] {
   width: 300px;
   margin: 0 auto;
   margin-top: 20px;
-  box-shadow: 1px 3px #814a4a;
-  background-color: rgb(245, 255, 255);
+  box-shadow: 1px 3px #e9c9c9;
+  background-color: rgb(255, 209, 209);
   display: grid;
 
+}
+
+.card h1{
+  background-color: #e9c9c9;
 }
 .card:hover {
   border-radius: 10px;

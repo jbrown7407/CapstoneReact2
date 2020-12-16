@@ -37,7 +37,12 @@ export default class Swipe extends Component {
         console.log(x)
       }
     }
-
+    // leftClick() {
+    //   console.log("left click. add to dislike array for user")
+    //     }
+    //   rightClick() {
+    //       console.log("right click. add to favs array. option to link to restaurant")
+    //     }
     return (
       <article className="card">
         {/* loop through items. SHOW JUST FIRST ITEM
@@ -51,9 +56,10 @@ export default class Swipe extends Component {
         <h1> Food: {meal1.meal} </h1>
         <h1> <a href={meal1.restlink}> Link to Restaurant</a> </h1>
 
-        <a href="#" onClick={buttonClicked}>UP</a>
+        <a href="/" onClick={buttonClicked}>UP</a>
         <button> Dislike </button>
         <button> Favorite </button>
+        {pullNewX()}
       </article>
     );
   }
