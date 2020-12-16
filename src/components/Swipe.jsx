@@ -8,37 +8,53 @@ export default class Swipe extends Component {
     this.state = {
       meals: this.props.meals
     };
-   
+
   }
 
   render() {
-    let randomNum = 1
+
     console.log(this.state.meals)
     
     //when page loads, meals as an array
     let mealArray = Object.values(this.props.meals)
     //  mealArray.push(Object.values(this.state.meals))
     // let x = this.state.index
-    let x= 1
+    let x = 0
+    function pullNewX() {
+      x = Math.ceil(Math.random() * (mealArray.length-1))
+    }
+    pullNewX()
     const meal1 = mealArray[x]
     console.log(typeof meal1)
     const meal2 = mealArray[2]
     console.log(typeof mealArray)
     //state tracks current
-     
+    function buttonClicked() {
+      function handleClick(e) {
+        e.preventDefault();
+        console.log('The link was clicked.');
+        x = x + 1
+        console.log(x)
+      }
+    }
+
     return (
-      <div>
+      <article className="card">
         {/* loop through items. SHOW JUST FIRST ITEM
          if this.handleclick left => dotn want (restart loop and i++)
         else this.handleclick right => do this isntead (push to favorites array and then i++) */}
           
-      X
+      
         <h1> {this.state.index} </h1>
-        <h1> <img src={meal1.pic}/> </h1>
-        <h1> {meal1.id} </h1>
-        <h1> {meal1.meal} </h1>
-        <h1> <a href={meal1.restlink}> Link to</a> </h1>
-      </div>
+        <h1> <img src={meal1.pic} /> </h1>
+        <h1> ID: {meal1.id} </h1>
+        <h1> Food: {meal1.meal} </h1>
+        <h1> <a href={meal1.restlink}> Link to Restaurant</a> </h1>
+
+        <a href="#" onClick={buttonClicked}>UP</a>
+        <button> Dislike </button>
+        <button> Favorite </button>
+      </article>
     );
   }
 }
