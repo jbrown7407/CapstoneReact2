@@ -42,7 +42,7 @@ export default class Meal extends Component {
           
  <button className="left" >Left</button>
   <button className="right" >Right</button>     <br />   <br />  
-         DELETE: <button onClick={this.handleClick}>X</button>
+         <button onClick={this.handleClick}>DELETE</button>
       </article> 
       
       // { if (this.props.meal.id != 1) }
