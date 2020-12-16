@@ -27,7 +27,7 @@ export default class Swipe extends Component {
       y = Math.ceil(Math.random() * (mealArray.length-1))
     }
     pullNewIndex()
-    const meal1 = mealArray[x]
+    let meal1 = mealArray[x]
     console.log(typeof meal1)
     const meal2 = mealArray[y]
     console.log(typeof mealArray)
@@ -38,6 +38,7 @@ export default class Swipe extends Component {
         console.log('The link was clicked.');
         x = x + 1
         console.log(x)
+       meal1 = mealArray[x]
       }
     }
     // leftClick() {
@@ -59,7 +60,7 @@ export default class Swipe extends Component {
         <h1> ID: {meal1.id} </h1>
         <h1> Food: {meal1.meal} </h1>
 
- <button><a href="#" onClick={buttonClicked}>UP</a> </button>
+ <button onClick={buttonClicked()}> UP  </button>
         <button> Dislike </button>
         <button> Favorite </button>
        
