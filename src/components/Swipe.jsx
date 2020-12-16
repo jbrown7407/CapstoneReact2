@@ -20,13 +20,17 @@ export default class Swipe extends Component {
     //  mealArray.push(Object.values(this.state.meals))
     // let x = this.state.index
     let x = 0
-    function pullNewX() {
+    let y = 0
+
+    function pullNewIndex() {
       x = Math.ceil(Math.random() * (mealArray.length-1))
+      y = Math.ceil(Math.random() * (mealArray.length-1))
     }
+
     pullNewX()
     const meal1 = mealArray[x]
     console.log(typeof meal1)
-    const meal2 = mealArray[2]
+    const meal2 = mealArray[y]
     console.log(typeof mealArray)
     //state tracks current
     function buttonClicked() {
@@ -59,7 +63,7 @@ export default class Swipe extends Component {
  <button><a href="#" onClick={buttonClicked}>UP</a> </button>
         <button> Dislike </button>
         <button> Favorite </button>
-        {pullNewX()}
+       
       </article>
     );
   }
