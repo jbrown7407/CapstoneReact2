@@ -50,13 +50,13 @@ export default class Swipe extends Component {
         else this.handleclick right => do this isntead (push to favorites array and then i++) */}
           
       
-        <h1> {this.state.index} </h1>
-        <h1> <img src={meal1.pic} /> </h1>
+        {/* <h1> {this.state.index} </h1> */}
+         <img src={meal1.pic} /> 
+        <h1> <a href={meal1.restlink}> Link to Order</a> </h1>
         <h1> ID: {meal1.id} </h1>
         <h1> Food: {meal1.meal} </h1>
-        <h1> <a href={meal1.restlink}> Link to Restaurant</a> </h1>
 
-        <a href="/" onClick={buttonClicked}>UP</a>
+ <button><a href="#" onClick={buttonClicked}>UP</a> </button>
         <button> Dislike </button>
         <button> Favorite </button>
         {pullNewX()}
