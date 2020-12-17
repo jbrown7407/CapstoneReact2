@@ -98,7 +98,7 @@ export default class App extends Component {
 
             <Route path="/">
             HOME
-            <UserName />
+            <UserName className="bubble" />
                <Home></Home>
             
           
