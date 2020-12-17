@@ -44,7 +44,7 @@ export default class App extends Component {
     });
   }
   getMeals() {
-    fetch("http://localhost:8000/api/v1/meals/")
+    fetch("https://dinnder-api.herokuapp.com/api/v1/meals/")
       .then((data) => {
         console.log(data);
         return data.json();
@@ -98,7 +98,7 @@ export default class App extends Component {
 
             <Route path="/">
             HOME
-            <UserName className="bubble" />
+            <UserName />
                <Home></Home>
             
           

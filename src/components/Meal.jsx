@@ -8,7 +8,7 @@ export default class Meal extends Component {
   }
 
   handleClick() {
-    fetch("http://localhost:8000/api/v1/meals/" + this.props.meal.id, {
+    fetch("https://dinnder-api.herokuapp.com/api/v1/meals/" + this.props.meal.id, {
       method: "DELETE",
     })
       .then((data) => {
