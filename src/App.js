@@ -105,7 +105,7 @@ export default class App extends Component {
             <Route path="/">
               HOME
                <Home></Home>
-          <Table meals={this.state.meals} deleteMeal={this.deleteMeal}></Table>
+          
           </Route> 
            
           </Switch>
