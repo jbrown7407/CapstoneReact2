@@ -9,18 +9,19 @@ export default function Home() {
         console.log("button was clicked") //LEARN MORE BUTTON FUNCTION
     }
     return (
-        <div>
+      <div>
+           <ListGroup vertical className="list">
+  <Link to="/swipe" className="pop">
+            <ListGroup.Item><h2 className="pop">Begin</h2></ListGroup.Item>
+              </Link>
+              </ListGroup>
             <Jumbotron>
   <h1>Hello, User!</h1>
   <p>
     This is a simple food Tinder App. Swipe Right on food to find restaurants near you!
   </p>
           <p>
-          <ListGroup vertical className="list">
-  <Link to="/swipe">
-            <ListGroup.Item><h1>Swipe</h1></ListGroup.Item>
-              </Link>
-              </ListGroup>
+       
   </p>
 </Jumbotron>
         </div>

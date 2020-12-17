@@ -67,11 +67,7 @@ export default class App extends Component {
     return (
 
       <Router>
-     
-      
-          <NavTop></NavTop>
-        
-  
+          <NavTop/>
            
           <Switch>
               
@@ -87,15 +83,13 @@ export default class App extends Component {
               render={(props) => <EditForm {...props} getMeals={this.getMeals} />}
             >Edit</Route> 
               
-            <Route path="/login">Login
+            <Route path="/login">Login Here
 
                <UserName />
             </Route> 
             
             <Route path="/swipe" >
-          
-              <Swipe meals={this.state.meals}></Swipe>
-           
+              <Swipe meals={this.state.meals}>SWIPE!</Swipe>
              </Route> 
             
             <Route path="/fulllist">
@@ -103,8 +97,10 @@ export default class App extends Component {
             </Route> 
 
             <Route path="/">
-              HOME
+            HOME
+            <UserName />
                <Home></Home>
+            
           
           </Route> 
            
