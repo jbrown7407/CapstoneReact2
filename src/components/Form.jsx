@@ -23,7 +23,7 @@ export default class Form extends Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    fetch("http://localhost:8000/api/v1/meals/", {
+    fetch("https://dinnder-api.herokuapp.com/api/v1/meals/", {
       method: "POST",
       body: JSON.stringify({
         id: this.state.id,
