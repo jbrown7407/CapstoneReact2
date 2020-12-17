@@ -70,12 +70,12 @@ export default class Swipe extends Component {
         {console.log(this.state.currentMeal)}
         {/* set to value x */}
 
-        <h1> {this.state.index} </h1> 
+        <h1> Do you want: {this.state.currentMeal.meal}? </h1> 
            <img src={this.state.currentMeal.pic} />  
-        <h1> <a href={this.state.currentMeal.restlink}> Link to Order</a> </h1>
+        <h1> <a href={this.state.currentMeal.restlink}> Click to Order</a> </h1>
         <h1> ID: {this.state.currentMeal.id} </h1>
-        <h1> Food: {this.state.currentMeal.meal} </h1> 
-        <Button onClick={() => this.clicked2()} variant="primary">SWIPE</Button>
+    
+        <Button className="jumbo" onClick={() => this.clicked2()} >SWIPE</Button>
 
         {/* <Button onClick={() => leftClick()} variant="primary">DISLIKE</Button>
         <Button onClick={() => rightClick()} variant="primary">LIKE</Button> */}
