@@ -44,7 +44,8 @@ export default class App extends Component {
     });
   }
   getMeals() {
-    fetch("https://dinnder-api.herokuapp.com/api/v1/meals/")
+    fetch("https://dinnder-api.herokuapp.com/api/v1/meals/", {credentials: "include"})
+
       .then((data) => {
         console.log(data);
         return data.json();
