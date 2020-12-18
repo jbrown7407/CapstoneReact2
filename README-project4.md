@@ -19,9 +19,10 @@ Difficulty Areas: <br />
 Heroku deployment issues. Server issue related to linux/peewee impacting back-end
 
 New Tech: <br />
-React-bootstrap
+React-bootstrap - bootstrap library imported into React library
 User Authentication via backend
-Flask
+Flask for backend
+React Router for switching between renders dynamically
 
 Future Update Ideas: <br />
 Link user location to search parameters
