@@ -28,4 +28,5 @@ Add favorites array for each user
 Difficulty Areas: <br />
 Heroku deployment issues. Server issue related to linux/peewee impacting back-end
 
+I took some inspiration from the original app but cards have a simpler design.
 <img src='/tinderUI.png'>
